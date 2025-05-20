@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* favicon */
+/* https://tinyurl.com/figma2304 */
+
+/* Lugar pra definir as variaveis CSS */
+:root {
+    --primary: #f3f4f6;
+    --secondary: #00ff99;
+    --tertiary: #04394e;
+    --background: linear-gradient(135deg, #04394e, #00875e);
+    --bgtext: linear-gradient(90deg, #00e6b8, #9acd32, #04394e);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 200ms;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 10px;
+}
+
+h2, h3 {
+    filter: drop-shadow(5px 1px 1px black);
+}
+
+body {
+    background: var(--background);
+    background-attachment: fixed;
+    font-family: Poppins, sans-serif;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary);
+    background-image: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+header .name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+header .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+header .menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+header .menu a:hover {
+    font-size: 23px;
+    border-bottom: 2px solid var(--secondary);
+    border-radius: 10%;
+}
+header .social-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header .social-menu img:hover {
+    width: 35px;
+}
+
+header .social-menu img {
+    width: 26px;
+    color: var(--primary);
+}
+
+main {
+    width: 85%;
+    margin: 220px auto 80px auto;
+}
+
+main .profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .job-area {
+    display: flex;
+    flex-direction: column;
+    color: var(--primary);
+    gap: 7px;
+}
+
+main .job-area span {
+    font-size: 28px;
+}
+
+main .job-area h1 {
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1.16;
+    background-image: var(--bgtext);
+    /* serve pra recortar o fundo com o formato do texto */
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    color: transparent;
+    padding-bottom: 20px;
+}
+
+main .job-area a {
+    border: 1px solid var(--secondary);
+    border-radius: 6px;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main .job-area .background-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--tertiary);
+    border: 8px;
+    left: 8px;
+    top: 8px;
+    z-index: -1;
+}
+
+.photo img {
+    width: 300px;
+    border-radius: 90%;
+    position: relative;
+    /* box-shadow: 1px 1px 20px 5px var(--secondary); */
+    filter: drop-shadow(1px 1px 10px var(--secondary));
+}
+
+.icons img {
+    width: 100px;
+}
+
+.icons  #html {
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    filter: drop-shadow(2px 2px 15px var(--tertiary));
+}
+
+.icons #css {
+    position: relative;
+    bottom: 450px;
+    right: 50px;
+    left: 15px;
+    filter: drop-shadow(2px 2px 15px var(--tertiary));
+}
+
+.icons #java{
+    position: relative;
+    bottom: 300px;
+    right: 50px;
+    left: 40px;
+    filter: drop-shadow(2px 2px 15px var(--tertiary));
+}
+/* .photo p {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background-image: radial-gradient(var(--primary), var(--secondary)10%);
+    position: relative;
+    bottom: 500px;
+    z-index: -1;
+    
+} */
+
+.about .first-about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 272px;
+    width: 900px;
+}
+
+.about .first-about h2 {
+    color: var(--tertiary);
+    font-size: 100px;
+}
+
+.about .first-about p {
+    font-size: 24px;
+}
+
+.about .datas-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 80px;
+    margin-top: 145px;
+    font-size: 24px;
+    width: 900px;
+    margin-left: 250px;
+    line-height: 44px;
+}
+
+.work .work-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.work .work-text h2 {
+    color: var(--tertiary);
+    font-size: 100px;
+}
+
+.work-text p {
+    line-height: 44px;
+    margin-bottom: 124px;
+}
+
+.work-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.work-img img {
+    width: 500px;
+}
+
+.solo-img {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+}
+
+footer {
+    /* margin: 0px 97px 90px 97px; */
+    padding: 0px 97px 95px 97px;
+}
+
+footer h3 {
+    font-size: 100px;
+    color: var(--primary);
+    margin-bottom: 43px;
+}
+
+footer .imagem-texto {
+    display: flex;
+    justify-content: center;
+    gap: 59px;
+}
+
+footer .footer-text p {
+    font-size: 24px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
